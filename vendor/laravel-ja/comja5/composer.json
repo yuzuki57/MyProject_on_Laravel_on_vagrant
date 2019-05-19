@@ -1,0 +1,38 @@
+{
+    "name": "laravel-ja/comja5",
+    "description": "Translate comments in laravel/laravel 5.* project to Japanese",
+    "license": "MIT",
+    "keywords": [
+        "laravel", "japanese", "resource"
+    ],
+    "authors": [
+        {
+            "name": "Hirohisa Kawase",
+            "email": "hiro.soft@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Comja\\": "Comja/"
+        },
+        "files": [
+            "helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestBase.php"
+        ]
+    },
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master",
+        "phpunit/phpunit": "4.5.0"
+    },
+    "bin": [
+        "bin/comja5"
+    ]
+}
