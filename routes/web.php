@@ -29,7 +29,7 @@ Route::get('/auth/login', 'Auth\LoginController@showLoginForm')->name('auth.getL
 Route::post('/auth/login', 'Auth\LoginController@login')->name('auth.postLogin');
 Route::get('/auth/logout', 'Auth\LoginController@logout')->name('auth.getLogout');
 
-/* ↓削除してOK。主にツイートのCURDのﾙｰﾃｨﾝｸﾞ
+/* ↓削除してOK。主にツイートのCURDのﾙｰﾃｨﾝｸﾞ処理
 Route::get('/tweets', 'TweetController@index');
 Route::get('/tweets/create', 'TweetController@create');
 Route::post('/tweets', 'TweetController@store');
