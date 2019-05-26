@@ -29,15 +29,7 @@ Route::get('/auth/login', 'Auth\LoginController@showLoginForm')->name('auth.getL
 Route::post('/auth/login', 'Auth\LoginController@login')->name('auth.postLogin');
 Route::get('/auth/logout', 'Auth\LoginController@logout')->name('auth.getLogout');
 
-/* ↓削除してOK。主にツイートのCURDのﾙｰﾃｨﾝｸﾞ処理
-Route::get('/tweets', 'TweetController@index');
-Route::get('/tweets/create', 'TweetController@create');
-Route::post('/tweets', 'TweetController@store');
-Route::get('/tweets/{id}', 'TweetController@show');
-Route::get('/tweets/{id}/edit', 'TweetController@edit');
-Route::put('/tweets/{id}', 'TweetController@update');
-Route::delete('/tweets/{id}', 'TweetController@destroy');
-*/
+
 Route::resource('/tweets', 'TweetController');
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/user/{id}/profile', 'UserProfileController@show')->name('user_profile.show');
