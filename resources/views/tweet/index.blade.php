@@ -7,7 +7,7 @@
         <div class="col-md-2">
             @if( Auth::check() )
             <p>
-                <img src="/storage/avatar/{{ Auth::user()->userProfile->avater_filename }}" class="img-circle" width="165" height="170"/>
+                <img src="/storage/avatar/{{ optional(Auth::user()->userProfile)->avater_filename }}" class="img-circle" width="165" height="170"/>
             </p>
             <p style="font-size: 20px; color: #fff"><i class="fab fa-github"></i>
                 {{ Auth::user()->name }}
@@ -15,7 +15,7 @@
             <p style="font-size: 20px; color: #fff" class="glyphicon glyphicon-comment">
             </p>
             <p style="font-size: 20px; color: #fff">
-                {{ Auth::user()->userProfile->introduction }}
+                {{ optional(Auth::user()->userProfil)e->introduction }}
             </p>
             <p>
                 <a class="btn btn-info glyphicon glyphicon-info-sign" href="{{ route('user_profile.show', ['id' => Auth::user()->id]) }}" style="font-size: 15px">

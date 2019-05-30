@@ -10,11 +10,11 @@
             <h3>名前</h3>
             <p>{{ $user->name }}</p>
             <h3>紹介文</h3>
-            <p>{{ $user->userProfile->introduction }}</p>
+            <p>{{ optional($user->userProfile)->introduction }}</p>
             <h3>誕生日</h3>
-            <p>{{ $user->userProfile->birthday }}</p>
+            <p>{{ optional($user->userProfile)->birthday }}</p>
             <h4>ユーザーアイコン</h4>
-            <p><img src="/storage/avatar/{{ $user->userProfile->avater_filename }}" class="img-rounded" /></p>
+            <p><img src="/storage/avatar/{{ ($user->userProfile)->avater_filename }}" class="img-rounded" /></p>
         </div>
     </div>
     <div class="row">
